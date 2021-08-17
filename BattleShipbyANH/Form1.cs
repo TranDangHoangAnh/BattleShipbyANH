@@ -121,12 +121,12 @@ namespace BattleShipbyANH
             DialogResult result = MessageBox.Show(this, $"SCORE:{Score}\nHIT YES TO RESTART OR NO TO EXIST GAME", "GAME OVER", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
                 GamePlay gamePlay = new GamePlay();
                 gamePlay.Show();
 
             }
-            if (result == DialogResult.No)
+            else
             {
                 Application.Exit();
             }
